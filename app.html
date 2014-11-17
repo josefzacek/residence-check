@@ -15,6 +15,9 @@
             display: block;
             max-width: 278px;
         }
+        .text-center {
+            text-align: center;
+        }
     </style>
     
     
@@ -34,8 +37,8 @@
         </a>
        
               
-        <p>This application will will help you to determine if you have residence in Ireland</p>
-        <p>You will need to provide number of days spent in Ireland in years 2010, 2011, 2012, 2013 and 2014 </p>
+        <p class="text-center">This application will will help you to determine if you have residence in Ireland</p>
+        <p class="text-center">You will need to provide number of days spent in Ireland in years 2010, 2011, 2012, 2013 and 2014 </p>
         
         <a href="#year2010" data-role="button" data-icon="arrow-r" data-iconpos="right">Lets go!</a>
       </article>
@@ -56,37 +59,49 @@
    
    <div id="year2010" data-role='page'>
       
-      <header data-role="header" data-role='home'>
+      <header data-role="header" data-position="fixed">
+          <a href="#home" data-icon="home" data-iconpos='notext'></a>
           <h1>Residence check</h1>
       </header>
       
       <article data-role="content">
-         2010
-          <ul data-role="listview" data-filter="true">
-              <li><a href="#img1">
-                  <h1>img 1</h1>
-                  <img src="images/images-1.jpg" alt="">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto iste adipisci commodi temporibus, vero minima id ea atque fugiat.</p>
-              </a></li>
-              <li><a href="#img2">
-                  <h1>img 2</h1>
-                  <img src="images/images-2.jpg" alt="">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto iste adipisci commodi temporibus, vero minima id ea atque fugiat.</p>
-              </a></li>
-              <li><a href="#img3">
-                  <h1>img 3</h1>
-                  <img src="images/images.jpg" alt="">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto iste adipisci commodi temporibus, vero minima id ea atque fugiat.</p>
-              </a></li>
-              <li><a href="#img4">
-                  <h1>img 4</h1>
-                  <img src="images/imgres.jpg" alt="">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto iste adipisci commodi temporibus, vero minima id ea atque fugiat.</p>
-              </a></li>
-          </ul>
+        <p class="text-center">Enter details for year 2010</p>
+        <label for="input-2010">Text Input:</label>
+        <input type="tel" name="name" id="input-2010" name="input-2010" placeholder="Enter number of days" autofocus required  />
+        <a href="#year2011" data-role="button" data-icon="arrow-r" data-iconpos="right">Lets go!</a>
       </article>
       
-      <footer data-role="footer">
+      <footer data-role="footer" data-position="fixed">
+         <nav data-role="navbar">
+          <ul>
+              <li><a href="#home" data-icon="home">Home</a></li>
+              <li><a href="http://www.taxworld.ie" data-icon="info">Taxworld</a></li>
+              <li><a href="http://www.alanmoore.ie" data-icon="info">Alanmoore</a></li>
+          </ul>
+         </nav>
+      </footer>
+   </div><!--   /year2010-->
+   
+   
+   
+   <div id="year2011" data-role='page'>
+      
+      <header data-role="header" data-position="fixed">
+          <a href="#home" data-icon="home" data-iconpos='notext'></a>
+          <h1>Residence check</h1>
+      </header>
+      
+      <article data-role="content">
+         
+         <form action="">
+             <label for="input-2010">Text Input:</label>
+            <input type="number" name="name" id="input-2010" name="input-2010" placeholder="Enter number of days" min="0" max="365" autofocus required  />
+            <input type="button" value="Submit">
+        </form>
+        
+      </article>
+      
+      <footer data-role="footer" data-position="fixed">
          <nav data-role="navbar">
           <ul>
               <li><a href="#home" data-icon="home">Home</a></li>
@@ -95,51 +110,11 @@
           </ul>
          </nav>
       </footer>
-   </div><!--   /year2010-->
-   
-   
-   <div id="year2011" data-role='page'>
-      
-      <header data-role="header">
-          <h1>Residence check</h1>
-      </header>
-      
-      <article data-role="content">
-         2011
-          <ul data-role="listview" data-filter="true">
-              <li><a href="#img1">
-                  <h1>img 1</h1>
-                  <img src="images/images-1.jpg" alt="">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto iste adipisci commodi temporibus, vero minima id ea atque fugiat.</p>
-              </a></li>
-              <li><a href="#img2">
-                  <h1>img 2</h1>
-                  <img src="images/images-2.jpg" alt="">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto iste adipisci commodi temporibus, vero minima id ea atque fugiat.</p>
-              </a></li>
-              <li><a href="#img3">
-                  <h1>img 3</h1>
-                  <img src="images/images.jpg" alt="">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto iste adipisci commodi temporibus, vero minima id ea atque fugiat.</p>
-              </a></li>
-              <li><a href="#img4">
-                  <h1>img 4</h1>
-                  <img src="images/imgres.jpg" alt="">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, iusto iste adipisci commodi temporibus, vero minima id ea atque fugiat.</p>
-              </a></li>
-          </ul>
-      </article>
-      
-      <footer data-role="footer" data-position="fixed">
-         <nav data-role="navbar">
-          <ul>
-              <li><a href="home" data-icon="home">Home</a></li>
-              <li><a href="http://www.taxworld.ie" data-icon="grid">Taxworld</a></li>
-              <li><a href="http://www.alanmoore.ie" data-icon="info">Alanmoore</a></li>
-          </ul>
-         </nav>
-      </footer>
    </div><!--   /year2011-->
+   
+   
+   
+   
    
    
    <div id="year2012" data-role='page'>
