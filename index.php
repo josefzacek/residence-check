@@ -20,8 +20,8 @@
       
       <article data-role="content">
       
-       <a href="http://www.alanmoore.ie" class="alanmoore-logo">
-           <img src="images/alanmoore-logo.jpg" alt="">
+       <a href="http://www.taxworld.ie/" class="taxworld-logo" title="www.taxworld.ie">
+           <img src="images/taxworld_logo.jpg" alt="Taxworld logo">
         </a>
        
               
@@ -37,14 +37,12 @@
           <ul>
               <li><a href="#home" data-icon="home">Home</a></li>
               <li><a href="http://www.taxworld.ie" data-icon="info">Taxworld</a></li>
-              <li><a href="http://www.alanmoore.ie" data-icon="info">Alanmoore</a></li>
           </ul>
          </nav>
       </footer>
    </div><!--   /home-->
    
-   
-   
+      
    
    <div id="input-form-page" data-role='page'>
       
@@ -92,7 +90,6 @@
           <ul>
               <li><a href="#home" data-icon="home">Home</a></li>
               <li><a href="http://www.taxworld.ie" data-icon="info">Taxworld</a></li>
-              <li><a href="http://www.alanmoore.ie" data-icon="info">Alanmoore</a></li>
           </ul>
          </nav>
       </footer>
@@ -127,27 +124,10 @@
           <ul>
               <li><a href="#home" data-icon="home">Home</a></li>
               <li><a href="http://www.taxworld.ie" data-icon="info">Taxworld</a></li>
-              <li><a href="http://www.alanmoore.ie" data-icon="info">Alanmoore</a></li>
           </ul>
          </nav>
       </footer>
    </div><!--   /form-result-->
-   
-   <script>
-       $(document).ready(function() {
-    
-    $(".ui-slider").wrap($('<div />').css({
-        position : 'relative',
-        display  : 'inline-block',
-        height   : '40px',
-        width    : '70px',
-        overflow : 'hidden',
-        top      : '-30px',  
-        left     : '46%'
-    }));
-});
-        
-    </script>
    
     
 </body>
