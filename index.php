@@ -8,19 +8,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    
-    <style>
-        .alanmoore-logo {
-            margin: 0 auto;
-            display: block;
-            max-width: 278px;
-        }
-        .text-center {
-            text-align: center;
-        }
-    </style>
-    
-    
+    <link rel="stylesheet" href="style.css">    
 </head>
 <body>
    
@@ -66,7 +54,18 @@
       
       <article data-role="content">
         <p class="text-center">Enter details for years 2010 - 2014</p>
-         <form action="form.html" method="get">
+         <form action="/form-result" method="get">
+            
+            
+         <label for="days1">Days:</label>
+      <input type="range" name="days1" id="points" value="182" min="0" max="365" data-popup-enabled="true">
+         
+         <label for="days2">Days:</label>
+      <input type="range" name="days2" id="points" value="182" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
+          
+          
+         
+           
             <label for="input-2010">Year 2010</label>
             <input type="number" id="input-2010" name="input-2010" placeholder="Enter number of days" min="0" max="365" autofocus required  />
             
@@ -82,6 +81,15 @@
             <label for="input-2014">Year 2014</label>
             <input type="number" id="input-2014" name="input-2014" placeholder="Enter number of days" min="0" max="365" required  />
             
+        
+      <label for="days3">Days:</label>
+      <input type="range" name="days3" id="points" value="182" min="0" max="365" data-popup-enabled="true">
+      
+      <label for="days4">Days:</label>
+      <input type="range" name="days4" id="points" value="182" min="0" max="365" data-popup-enabled="true" data-show-value="true">
+      
+    
+            
             <input type="submit" value="Submit">
         </form>
       </article>
@@ -96,6 +104,33 @@
          </nav>
       </footer>
    </div><!--   /input-form-page-->
+   
+   
+   
+   <div id="form-result" data-role='page'>
+      
+      <header data-role="header" data-position="fixed">
+          <a href="#home" data-icon="home" data-iconpos='notext'></a>
+          <h1>Residence check</h1>
+      </header>
+      
+      <article data-role="content">
+        <p class="text-center">Your results</p>
+        
+        <h2>Hello world</h2>
+         
+      </article>
+      
+      <footer data-role="footer" data-position="fixed">
+         <nav data-role="navbar">
+          <ul>
+              <li><a href="#home" data-icon="home">Home</a></li>
+              <li><a href="http://www.taxworld.ie" data-icon="info">Taxworld</a></li>
+              <li><a href="http://www.alanmoore.ie" data-icon="info">Alanmoore</a></li>
+          </ul>
+         </nav>
+      </footer>
+   </div><!--   /form-result-->
    
     
 </body>
