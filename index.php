@@ -55,62 +55,37 @@
       
       <article data-role="content">
         <p class="text-center">Enter details for years 2010 - 2014</p>
-         <form action="#form-result" method="post" data-ajax="false">
-           
+        
+          <form action="#form-result" method="post" data-ajax="false">
            
            <?php
                 if ( isset ( $_REQUEST['submit'] ) ) { $submit = $_REQUEST['submit']; } else { $submit = ""; }
-				if ( isset ( $_REQUEST['input_2010'] ) ) { $input_2010 = $_REQUEST['input_2010']; } else { $layout = ""; }
-				if ( isset ( $_REQUEST['titles'] ) ) { $title = $_REQUEST['title']; } else { $title = ""; }
-				if ( isset ( $_REQUEST['timeout'] ) ) { $timeout = $_REQUEST['timeout']; } else { $timeout = "0"; }
-				if ( isset ( $_REQUEST['transition'] ) ) { $transition = $_REQUEST['transition']; } else { $transition = ""; }
+				if ( isset ( $_REQUEST['input_2010'] ) ) { $input_2010 = $_REQUEST['input_2010']; } else { $input_2010 = ""; }
+				if ( isset ( $_REQUEST['input_2011'] ) ) { $input_2011 = $_REQUEST['input_2011']; } else { $input_2010 = ""; }
+                if ( isset ( $_REQUEST['input_2012'] ) ) { $input_2012 = $_REQUEST['input_2012']; } else { $input_2010 = ""; }
+                if ( isset ( $_REQUEST['input_2013'] ) ) { $input_2013 = $_REQUEST['input_2013']; } else { $input_2010 = ""; }
+                if ( isset ( $_REQUEST['input_2014'] ) ) { $input_2014 = $_REQUEST['input_2014']; } else { $input_2010 = ""; }
 			?>
             
+            <label for="input_2010">Year 2010:</label>
+            <input type="range" name="input_2010" id="input_2010" value="0" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
+
+            <label for="input_2011">Year 2011:</label>
+            <input type="range" name="input_2011" id="input_2011" value="0" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
             
-         <label for="days1">Days:</label>
-      <input type="range" name="days1" id="points" value="182" min="0" max="365" data-popup-enabled="true">
-         
-         <label for="days2">Days:</label>
-      <input type="range" name="days2" id="points" value="182" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
-          
-          
-         
-           
-            <label for="input_2010">Year 2010</label>
-            <input type="number" id="input_2010" name="input_2010" placeholder="Enter number of days" min="0" max="365" autofocus required  />
+            <label for="input_2012">Year 2012:</label>
+            <input type="range" name="input_2012" id="input_2012" value="0" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
+
+            <label for="input_2013">Year 2013:</label>
+            <input type="range" name="input_2013" id="input_2013" value="0" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
             
-            <label for="input-2011">Year 2011</label>
-            <input type="number" id="input-2011" name="input-2011" placeholder="Enter number of days" min="0" max="365" required  />
-            
-            <label for="input-2012">Year 2012</label>
-            <input type="number" id="input-2012" name="input-2012" placeholder="Enter number of days" min="0" max="365" required  />  
-                          
-            <label for="input-2013">Year 2013</label>
-            <input type="number" id="input-2013" name="input-2013" placeholder="Enter number of days" min="0" max="365" required  /> 
-                           
-            <label for="input-2014">Year 2014</label>
-            <input type="number" id="input-2014" name="input-2014" placeholder="Enter number of days" min="0" max="365" required  />
-            
-        
-      <label for="days3">Days:</label>
-      <input type="range" name="days3" id="points" value="182" min="0" max="365" data-popup-enabled="true">
-      
-      <label for="days4">Days:</label>
-      <input type="range" name="days4" id="points" value="182" min="0" max="365" data-popup-enabled="true" data-show-value="true">
-      
+            <label for="input_2014">Year 2014:</label>
+            <input type="range" name="input_2014" id="input_2014" value="0" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
     
-            
             <input type="submit" name="submit" value="Submit">
         </form>
+        
       </article>
-      
-      <h2><?php echo $submit == "" ? "Please fill in the form and press submit" : "You chose:" ?></h2>
-		<div class="ui-body ui-body-d ui-corner-all">
-			<p>Title: <strong><?php echo $submit == "" ? "-" : $input_2010 ?></strong></p>
-			<p>Preview: <strong><?php echo $submit == "" ? "-" : $layout ?></strong></p>
-			<p>Timeout: <strong><?php echo $submit == "" ? "-" : $timeout ?></strong></p>
-			<p>Transition: <strong><?php echo $submit == "" ? "-" : $transition ?></strong></p>
-		</div>
       
       <footer data-role="footer" data-position="fixed">
          <nav data-role="navbar">
@@ -135,14 +110,16 @@
       <article data-role="content">
         <p class="text-center">Your results</p>
         
-        <h2><?php echo $submit == "" ? "Please fill in the form and press submit" : "You chose:" ?></h2>
-		<div class="ui-body ui-body-d ui-corner-all">
-			<p>Title: <strong><?php echo $submit == "" ? "-" : $input_2010 ?></strong></p>
-			<p>Preview: <strong><?php echo $submit == "" ? "-" : $layout ?></strong></p>
-			<p>Timeout: <strong><?php echo $submit == "" ? "-" : $timeout ?></strong></p>
-			<p>Transition: <strong><?php echo $submit == "" ? "-" : $transition ?></strong></p>
-		</div>
-         
+        <h2>Details collected</h2>
+		
+        <p>Year 2010: <strong><?php echo $input_2010 ?></strong> days</p>
+        <p>Year 2011: <strong><?php echo $input_2011 ?></strong> days</p>
+        <p>Year 2012: <strong><?php echo $input_2012 ?></strong> days</p>
+        <p>Year 2013: <strong><?php echo $input_2013 ?></strong> days</p>
+        <p>Year 2014: <strong><?php echo $input_2014 ?></strong> days</p>
+        
+        <a href="#input-form-page" data-role="button" data-icon="arrow-l">Back</a>
+	 
       </article>
       
       <footer data-role="footer" data-position="fixed">
@@ -155,6 +132,22 @@
          </nav>
       </footer>
    </div><!--   /form-result-->
+   
+   <script>
+       $(document).ready(function() {
+    
+    $(".ui-slider").wrap($('<div />').css({
+        position : 'relative',
+        display  : 'inline-block',
+        height   : '40px',
+        width    : '70px',
+        overflow : 'hidden',
+        top      : '-30px',  
+        left     : '46%'
+    }));
+});
+        
+    </script>
    
     
 </body>
