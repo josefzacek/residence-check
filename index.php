@@ -107,19 +107,30 @@
       <article data-role="content">
         <h2 class="text-center">Your results</h2>
         
-          <p><strong>You have provided following details:</strong></p>
+          <p class="text-center"><strong>You have provided following details:</strong></p>
 		
-       
-       <ul>
+<!--       show details entered-->
+       <ul data-role="listview">
            <li>Year 2010: <strong><?php echo $input_2010 ?></strong> days</li>
            <li>Year 2011: <strong><?php echo $input_2011 ?></strong> days</li>
            <li>Year 2012: <strong><?php echo $input_2012 ?></strong> days</li>
            <li>Year 2013: <strong><?php echo $input_2013 ?></strong> days</li>
            <li>Year 2014: <strong><?php echo $input_2014 ?></strong> days</li>
        </ul>
+       <p>&nbsp;</p>
+       
+<!--       show total days-->
+      <?php
+            $total_days = $input_2010 + $input_2011 + $input_2012 + $input_2013 + $input_2014;
+      ?>
+      
+       <ul data-role="listview">
+           <li>Total: <strong><?php echo $total_days ?></strong> days</li>
+       </ul>
+       <p>&nbsp;</p>
         
         
-        <a href="#input-form-page" data-role="button" data-icon="arrow-l">Go again</a>
+        <a href="#input-form-page" data-role="button" data-icon="arrow-l" data-transition="pop">Go again</a>
 	 
       </article>
       
