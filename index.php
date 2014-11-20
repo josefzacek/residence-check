@@ -105,17 +105,21 @@
       </header>
       
       <article data-role="content">
-        <p class="text-center">Your results</p>
+        <h2 class="text-center">Your results</h2>
         
-        <h2>Details collected</h2>
+          <p><strong>You have provided following details:</strong></p>
 		
-        <p>Year 2010: <strong><?php echo $input_2010 ?></strong> days</p>
-        <p>Year 2011: <strong><?php echo $input_2011 ?></strong> days</p>
-        <p>Year 2012: <strong><?php echo $input_2012 ?></strong> days</p>
-        <p>Year 2013: <strong><?php echo $input_2013 ?></strong> days</p>
-        <p>Year 2014: <strong><?php echo $input_2014 ?></strong> days</p>
+       
+       <ul>
+           <li>Year 2010: <strong><?php echo $input_2010 ?></strong> days</li>
+           <li>Year 2011: <strong><?php echo $input_2011 ?></strong> days</li>
+           <li>Year 2012: <strong><?php echo $input_2012 ?></strong> days</li>
+           <li>Year 2013: <strong><?php echo $input_2013 ?></strong> days</li>
+           <li>Year 2014: <strong><?php echo $input_2014 ?></strong> days</li>
+       </ul>
         
-        <a href="#input-form-page" data-role="button" data-icon="arrow-l">Back</a>
+        
+        <a href="#input-form-page" data-role="button" data-icon="arrow-l">Go again</a>
 	 
       </article>
       
