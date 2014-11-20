@@ -29,6 +29,7 @@
         <p class="text-center">You will need to provide number of days spent in Ireland in years 2010, 2011, 2012, 2013 and 2014 </p>
         
         <a href="#input-form-page" data-role="button" data-icon="arrow-r" data-iconpos="right">Lets go!</a>
+        
       </article>
       
       <footer data-role="footer" data-position="fixed">
@@ -54,7 +55,16 @@
       
       <article data-role="content">
         <p class="text-center">Enter details for years 2010 - 2014</p>
-         <form action="/form-result" method="get">
+         <form action="#form-result" method="post" data-ajax="false">
+           
+           
+           <?php
+                if ( isset ( $_REQUEST['submit'] ) ) { $submit = $_REQUEST['submit']; } else { $submit = ""; }
+				if ( isset ( $_REQUEST['input_2010'] ) ) { $input_2010 = $_REQUEST['input_2010']; } else { $layout = ""; }
+				if ( isset ( $_REQUEST['titles'] ) ) { $title = $_REQUEST['title']; } else { $title = ""; }
+				if ( isset ( $_REQUEST['timeout'] ) ) { $timeout = $_REQUEST['timeout']; } else { $timeout = "0"; }
+				if ( isset ( $_REQUEST['transition'] ) ) { $transition = $_REQUEST['transition']; } else { $transition = ""; }
+			?>
             
             
          <label for="days1">Days:</label>
@@ -66,8 +76,8 @@
           
          
            
-            <label for="input-2010">Year 2010</label>
-            <input type="number" id="input-2010" name="input-2010" placeholder="Enter number of days" min="0" max="365" autofocus required  />
+            <label for="input_2010">Year 2010</label>
+            <input type="number" id="input_2010" name="input_2010" placeholder="Enter number of days" min="0" max="365" autofocus required  />
             
             <label for="input-2011">Year 2011</label>
             <input type="number" id="input-2011" name="input-2011" placeholder="Enter number of days" min="0" max="365" required  />
@@ -90,9 +100,17 @@
       
     
             
-            <input type="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit">
         </form>
       </article>
+      
+      <h2><?php echo $submit == "" ? "Please fill in the form and press submit" : "You chose:" ?></h2>
+		<div class="ui-body ui-body-d ui-corner-all">
+			<p>Title: <strong><?php echo $submit == "" ? "-" : $input_2010 ?></strong></p>
+			<p>Preview: <strong><?php echo $submit == "" ? "-" : $layout ?></strong></p>
+			<p>Timeout: <strong><?php echo $submit == "" ? "-" : $timeout ?></strong></p>
+			<p>Transition: <strong><?php echo $submit == "" ? "-" : $transition ?></strong></p>
+		</div>
       
       <footer data-role="footer" data-position="fixed">
          <nav data-role="navbar">
@@ -117,7 +135,13 @@
       <article data-role="content">
         <p class="text-center">Your results</p>
         
-        <h2>Hello world</h2>
+        <h2><?php echo $submit == "" ? "Please fill in the form and press submit" : "You chose:" ?></h2>
+		<div class="ui-body ui-body-d ui-corner-all">
+			<p>Title: <strong><?php echo $submit == "" ? "-" : $input_2010 ?></strong></p>
+			<p>Preview: <strong><?php echo $submit == "" ? "-" : $layout ?></strong></p>
+			<p>Timeout: <strong><?php echo $submit == "" ? "-" : $timeout ?></strong></p>
+			<p>Transition: <strong><?php echo $submit == "" ? "-" : $transition ?></strong></p>
+		</div>
          
       </article>
       
