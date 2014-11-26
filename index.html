@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">    
 </head>
 <body>
@@ -35,7 +36,7 @@
       <footer data-role="footer" data-position="fixed">
          <nav data-role="navbar">
           <ul>
-              <li><a href="#home" data-icon="home">Home</a></li>
+              <li><a href="index.html" data-icon="home" data-ajax="false">Home</a></li>
               <li><a href="http://www.taxworld.ie" data-icon="info">Taxworld</a></li>
           </ul>
          </nav>
@@ -47,26 +48,17 @@
    <div id="input-form-page" data-role='page'>
       
       <header data-role="header" data-position="fixed">
-          <a href="#home" data-icon="home" data-iconpos='notext'></a>
+          <a href="index.html" data-icon="home" data-ajax="false" data-iconpos='notext'></a>
           <h1>Residence check</h1>
       </header>
       
       <article data-role="content">
         <p class="text-center">Enter details for years 2010 - 2014</p>
         
-          <form action="#form-result" method="post" data-ajax="false">
-           
-           <?php
-                if ( isset ( $_REQUEST['submit'] ) ) { $submit = $_REQUEST['submit']; } else { $submit = ""; }
-				if ( isset ( $_REQUEST['input_2010'] ) ) { $input_2010 = $_REQUEST['input_2010']; } else { $input_2010 = ""; }
-				if ( isset ( $_REQUEST['input_2011'] ) ) { $input_2011 = $_REQUEST['input_2011']; } else { $input_2010 = ""; }
-                if ( isset ( $_REQUEST['input_2012'] ) ) { $input_2012 = $_REQUEST['input_2012']; } else { $input_2010 = ""; }
-                if ( isset ( $_REQUEST['input_2013'] ) ) { $input_2013 = $_REQUEST['input_2013']; } else { $input_2010 = ""; }
-                if ( isset ( $_REQUEST['input_2014'] ) ) { $input_2014 = $_REQUEST['input_2014']; } else { $input_2010 = ""; }
-			?>
+          <form action="" method="post" data-ajax="false">
             
             <label for="input_2010">Year 2010:</label>
-            <input type="range" name="input_2010" id="input_2010" value="0" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
+            <input type="range" name="input_2010" id="input_2010"  value="0" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
 
             <label for="input_2011">Year 2011:</label>
             <input type="range" name="input_2011" id="input_2011" value="0" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
@@ -79,16 +71,16 @@
             
             <label for="input_2014">Year 2014:</label>
             <input type="range" name="input_2014" id="input_2014" value="0" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
-    
-            <input type="submit" name="submit" value="Submit">
         </form>
+        
+        <a href="#form-result" data-role="button" onclick="form_data_submit()">Submit</a>
         
       </article>
       
       <footer data-role="footer" data-position="fixed">
          <nav data-role="navbar">
           <ul>
-              <li><a href="#home" data-icon="home">Home</a></li>
+              <li><a href="index.html" data-icon="home" data-ajax="false">Home</a></li>
               <li><a href="http://www.taxworld.ie" data-icon="info">Taxworld</a></li>
           </ul>
          </nav>
@@ -100,7 +92,7 @@
    <div id="form-result" data-role='page'>
       
       <header data-role="header" data-position="fixed">
-          <a href="#home" data-icon="home" data-iconpos='notext'></a>
+          <a href="index.html" data-icon="home" data-ajax="false" data-iconpos='notext'></a>
           <h1>Residence check</h1>
       </header>
       
@@ -111,33 +103,28 @@
 		
 <!--       show details entered-->
        <ul data-role="listview">
-           <li>Year 2010: <strong><?php echo $input_2010 ?></strong> days</li>
-           <li>Year 2011: <strong><?php echo $input_2011 ?></strong> days</li>
-           <li>Year 2012: <strong><?php echo $input_2012 ?></strong> days</li>
-           <li>Year 2013: <strong><?php echo $input_2013 ?></strong> days</li>
-           <li>Year 2014: <strong><?php echo $input_2014 ?></strong> days</li>
+           <li>Year 2010: <strong class="year_2010"></strong> days</li>
+           <li>Year 2011: <strong class="year_2011"></strong> days</li>
+           <li>Year 2012: <strong class="year_2012"></strong> days</li>
+           <li>Year 2013: <strong class="year_2013"></strong> days</li>
+           <li>Year 2014: <strong class="year_2014"></strong> days</li>
        </ul>
        <p>&nbsp;</p>
-       
-<!--       show total days-->
-      <?php
-            $total_days = $input_2010 + $input_2011 + $input_2012 + $input_2013 + $input_2014;
-      ?>
       
        <ul data-role="listview">
-           <li>Total: <strong><?php echo $total_days ?></strong> days</li>
+           <li>Total: <strong class="total_days"></strong> days</li>
        </ul>
        <p>&nbsp;</p>
         
         
-        <a href="#input-form-page" data-role="button" data-icon="arrow-l" data-transition="pop">Go again</a>
+        <a href="index.html" data-ajax="false" data-role="button" data-icon="arrow-l" data-transition="pop">Go again</a>
 	 
       </article>
       
       <footer data-role="footer" data-position="fixed">
          <nav data-role="navbar">
           <ul>
-              <li><a href="#home" data-icon="home">Home</a></li>
+              <li><a href="index.html" data-icon="home" data-ajax="false">Home</a></li>
               <li><a href="http://www.taxworld.ie" data-icon="info">Taxworld</a></li>
           </ul>
          </nav>
