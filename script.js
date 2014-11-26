@@ -59,10 +59,10 @@ function form_data_submit() {
         
         //check ordinary resident
         if (Input_2011 > 183 && Input_2012 > 183 && Input_2013 > 183) {
-            $('.ordinary_resident').append('You are ordinary resident');
+            $('.ordinary_resident').append('You are ordinary resident').css("color", "green");
         }
         else {
-            $('.ordinary_resident').append('You haven\'t been resident in 2011/ 2012/ 2013 therefore you are NOT ordinary resident');
+            $('.ordinary_resident').append('You haven\'t been resident in 2011/ 2012/ 2013 therefore you are NOT ordinary resident').css('color', 'red');
         }
 
 
