@@ -1,5 +1,5 @@
 article {
-background-color: #fff;
+    background-color: #fff;
 }
 
 .taxworld-logo {
@@ -9,4 +9,15 @@ background-color: #fff;
 }
 .text-center {
     text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* stop cutting off text in listview*/
+.ui-li-desc {
+    white-space: normal !important;
 }
