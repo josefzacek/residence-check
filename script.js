@@ -70,42 +70,45 @@ $(document).ready(function () {
         var Years_2010_2011 = Input_2010 + Input_2011; 
         if (Years_2010_2011 >= 280) {
             $('.resident_years_2010_2011').append(Years_2010_2011 + ' days in years 2010 / 2011 therefore you ARE').css("color", "green");
+            var or_2010_2011 = 1;
         }
         else {
             $('.resident_years_2010_2011').append('only ' + Years_2010_2011 + ' days in years 2010 / 2011 therefore you ARE NOT').css('color', 'red');
+            var or_2010_2011 = 0;
         }
         
         // 2011/2012
         var Years_2011_2012 = Input_2011 + Input_2012; 
         if (Years_2011_2012 >= 280) {
             $('.resident_years_2011_2012').append(Years_2011_2012 + ' days in years 2011 / 2012 therefore you ARE').css("color", "green");
+            var or_2011_2012 = 1;
         }
         else {
             $('.resident_years_2011_2012').append('only ' + Years_2011_2012 + ' days in years 2011 / 2012 therefore you ARE NOT').css('color', 'red');
+            var or_2011_2012 = 0;
         }
         
         // 2012/2013
         var Years_2012_2013 = Input_2012 + Input_2013; 
         if (Years_2012_2013 >= 280) {
             $('.resident_years_2012_2013').append(Years_2012_2013 + ' days in years 2012 / 2013 therefore you ARE').css("color", "green");
+            var or_2012_2013 = 1;
         }
         else {
             $('.resident_years_2012_2013').append('only ' + Years_2012_2013 + ' days in years 2012 / 2013 therefore you ARE NOT').css('color', 'red');
+            var or_2012_2013 = 0;
         }
 
-            
-        
-        
-        
-        
         
         //check ordinary resident
-        if (Input_2011 > 183 && Input_2012 > 183 && Input_2013 > 183) {
-            $('.ordinary_resident').append('You are ordinary resident').css("color", "green");
+        if(Input_2011 > 183 && or_2010_2011 == 1 && or_2011_2012 == 1) {
+            $('.ordinary_resident').append('You ARE ordinarily resident for year 2014').css("color", "green");
         }
         else {
-            $('.ordinary_resident').append('You haven\'t been resident in 2011/ 2012/ 2013 therefore you are NOT ordinary resident').css('color', 'red');
+            $('.ordinary_resident').append('You ARE NOT ordinarily resident for year 2014').css('color', 'red');
         }
+        
+        
 
     });
     
