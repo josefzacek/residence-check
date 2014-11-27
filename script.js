@@ -29,38 +29,38 @@ $(document).ready(function () {
         
         //check if resident each year
         if (Input_2010 < 183) {
-            $('.resident_year_2010').append('WERE NOT');
+            $('.resident_year_2010').append('WERE NOT').css('color', 'red');
         }
         else {
-            $('.resident_year_2010').append('WERE');
+            $('.resident_year_2010').append('WERE').css("color", "green");
         }
         
         if (Input_2011 < 183) {
-            $('.resident_year_2011').append('WERE NOT');
+            $('.resident_year_2011').append('WERE NOT').css('color', 'red');
         }
         else {
-            $('.resident_year_2011').append('WERE');
+            $('.resident_year_2011').append('WERE').css("color", "green");
         }
         
         if (Input_2012 < 183) {
-            $('.resident_year_2012').append('WERE NOT');
+            $('.resident_year_2012').append('WERE NOT').css('color', 'red');
         }
         else {
-            $('.resident_year_2012').append('WERE');
+            $('.resident_year_2012').append('WERE').css("color", "green");
         }
         
         if (Input_2013 < 183) {
-            $('.resident_year_2013').append('WERE NOT');
+            $('.resident_year_2013').append('WERE NOT').css('color', 'red');
         }
         else {
-            $('.resident_year_2013').append('WERE');
+            $('.resident_year_2013').append('WERE').css("color", "green");
         }
         
         if (Input_2014 < 183) {
-            $('.resident_year_2014').append('WERE NOT');
+            $('.resident_year_2014').append('WERE NOT').css('color', 'red');
         }
         else {
-            $('.resident_year_2014').append('ARE');
+            $('.resident_year_2014').append('ARE').css("color", "green");
         }
         
         
