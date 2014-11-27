@@ -18,6 +18,7 @@ hr {
 }
 
 /* stop cutting off text in listview*/
-.ui-li-desc {
+.ui-listview>.ui-li-static {
     white-space: normal !important;
+    text-align: center;
 }

@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('#form-input-submit-button').click(function(){ 
         
         // make sure there are no values present, expecially if user clicks back button
-        $('.year_2010, .year_2011, .year_2012, .year_2013, .year_2014, .total_days, .resident_year_2010, .resident_year_2011, .resident_year_2012, .resident_year_2013, .resident_year_2014, .ordinary_resident').empty();
+        $('.year_2010, .year_2011, .year_2012, .year_2013, .year_2014, .total_days, .resident_year_2010, .resident_year_2011, .resident_year_2012, .resident_year_2013, .resident_year_2014, .ordinary_resident, .resident_years_2010_2011, .resident_years_2011_2012, .resident_years_2012_2013').empty();
     
         //get inputs
         var Input_2010 = parseInt($("#input_2010").val(), 10);
@@ -63,6 +63,42 @@ $(document).ready(function () {
             $('.resident_year_2014').append('ARE');
         }
         
+        
+        //resident in 2 years
+        
+        // 2010/2011
+        var Years_2010_2011 = Input_2010 + Input_2011; 
+        if (Years_2010_2011 >= 280) {
+            $('.resident_years_2010_2011').append(Years_2010_2011 + ' days in years 2010 / 2011 therefore you ARE').css("color", "green");
+        }
+        else {
+            $('.resident_years_2010_2011').append('only ' + Years_2010_2011 + ' days in years 2010 / 2011 therefore you ARE NOT').css('color', 'red');
+        }
+        
+        // 2011/2012
+        var Years_2011_2012 = Input_2011 + Input_2012; 
+        if (Years_2011_2012 >= 280) {
+            $('.resident_years_2011_2012').append(Years_2011_2012 + ' days in years 2011 / 2012 therefore you ARE').css("color", "green");
+        }
+        else {
+            $('.resident_years_2011_2012').append('only ' + Years_2011_2012 + ' days in years 2011 / 2012 therefore you ARE NOT').css('color', 'red');
+        }
+        
+        // 2012/2013
+        var Years_2012_2013 = Input_2012 + Input_2013; 
+        if (Years_2012_2013 >= 280) {
+            $('.resident_years_2012_2013').append(Years_2012_2013 + ' days in years 2012 / 2013 therefore you ARE').css("color", "green");
+        }
+        else {
+            $('.resident_years_2012_2013').append('only ' + Years_2012_2013 + ' days in years 2012 / 2013 therefore you ARE NOT').css('color', 'red');
+        }
+
+            
+        
+        
+        
+        
+        
         //check ordinary resident
         if (Input_2011 > 183 && Input_2012 > 183 && Input_2013 > 183) {
             $('.ordinary_resident').append('You are ordinary resident').css("color", "green");
@@ -72,6 +108,8 @@ $(document).ready(function () {
         }
 
     });
+    
+    
     
     
 
