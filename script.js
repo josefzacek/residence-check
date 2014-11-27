@@ -3,6 +3,9 @@ $(document).ready(function () {
 
     // click on submit button
     $('#form-input-submit-button').click(function(){ 
+        
+        // make sure there are no values present, expecially if user clicks back button
+        $('.year_2010, .year_2011, .year_2012, .year_2013, .year_2014, .total_days, .resident_year_2010, .resident_year_2011, .resident_year_2012, .resident_year_2013, .resident_year_2014, .ordinary_resident').empty();
     
         //get inputs
         var Input_2010 = parseInt($("#input_2010").val(), 10);
@@ -69,5 +72,7 @@ $(document).ready(function () {
         }
 
     });
+    
+    
 
 });
