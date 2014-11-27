@@ -1,6 +1,9 @@
-function form_data_submit() {
 
-    $(document).ready(function () {
+$(document).ready(function () {
+
+    // click on submit button
+    $('#form-input-submit-button').click(function(){ 
+    
         //get inputs
         var Input_2010 = parseInt($("#input_2010").val(), 10);
         var Input_2011 = parseInt($("#input_2011").val(), 10);
@@ -65,7 +68,6 @@ function form_data_submit() {
             $('.ordinary_resident').append('You haven\'t been resident in 2011/ 2012/ 2013 therefore you are NOT ordinary resident').css('color', 'red');
         }
 
+    });
 
-     });
-
-};
+});
