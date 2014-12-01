@@ -101,7 +101,7 @@ $(document).ready(function () {
 
         
         //check ordinary resident
-        if(Input_2011 > 183 && or_2010_2011 == 1 && or_2011_2012 == 1) {
+        if(or_2010_2011 == 1 && or_2011_2012 == 1 && or_2012_2013 == 1) {
             $('.ordinary_resident').append('You ARE ordinarily resident for year 2014').css("color", "green");
         }
         else {
