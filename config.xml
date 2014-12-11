@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns = "http://www.w3.org/ns/widgets"
+   
+<widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.taxworld.residence-check"
         versionCode="10" 
         version   = "1.0.0">
+        
+    <name>TaxWorld Residence Check</name>
+    
+    <description>
+        TaxWorld Residence Check application 
+    </description>
+    
+    <author href="https://josefzacek.com" email="info@josefzacek.com">
+        Josef Zacek
+    </author>
 		
 	<!-- For more information about using config.xml, see
 		https://build.phonegap.com/docs/config-xml -->
 	
 	<!-- this app will have no device api access -->
 	<preference name="permissions" value="none"/>
+	<preference name="phonegap-version" value="3.5.0" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" />
+	
 	
 	<!-- the default icon to be use, for BlackBerry must be less than 16kb -->
 	<icon src="laphonegap_icon.png" />
@@ -30,14 +46,10 @@
 	<!-- Windows Phone -->
 	<gap:splash src="laphonegap_splash.jpg" gap:platform="winphone" />
 
-    <name>TaxWorld Residence Check</name>
+    
 
-    <description>
-        TaxWorld Residence Check application 
-    </description>
+    
 
-    <author href="https://josefzacek.com" email="info@josefzacek.com">
-        Josef Zacek
-    </author>
+    
 
 </widget>
