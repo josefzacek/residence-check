@@ -1,5 +1,20 @@
 
 $(document).ready(function () {
+    
+   // custom accordion animation on homepage
+   $("[data-role='collapsible']").collapsible({
+
+        collapse: function( event, ui ) {
+            $(this).children().next().slideUp(350);
+        },
+        expand: function( event, ui ) {
+            $(this).children().next().hide();
+            $(this).children().next().slideDown(630);
+        }
+
+    });
+    
+    
 
     // click on submit button
     $('#form-input-submit-button').click(function(){ 
