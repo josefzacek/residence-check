@@ -5,15 +5,18 @@
     <meta name="author" content="www.josefzacek.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Residence check</title>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="themes/taxworld-theme.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">    
 </head>
+
 <body>
    
-   <div id="home" data-role='page'>
+   <div id="home" data-role='page' data-title="Residence check - home page">
       
       <header data-role="header" data-position="fixed">
                   <h1>Residence check</h1>
@@ -29,7 +32,7 @@
         <p class="text-center">This application will will help you to determine if you have residence in Ireland</p>
         <p class="text-center">You will need to provide number of days spent in Ireland in years 2010, 2011, 2012, 2013 and 2014 </p>
         
-        <a href="#input-form-page" data-role="button" data-icon="arrow-r" data-iconpos="right">Lets go!</a>
+        <a href="#input-form-page" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="slidefade">Lets go!</a>
         
           <div data-role="collapsible-set">
 
@@ -63,10 +66,10 @@
    
       
    
-   <div id="input-form-page" data-role='page'>
+   <div id="input-form-page" data-role='page' data-title="Residence check - enter details">
       
       <header data-role="header" data-position="fixed">
-          <a href="index.html" data-icon="home" data-ajax="false" data-iconpos='notext'></a>
+          <a href="index.html" data-icon="home" data-transition="slidefade" data-iconpos='notext'></a>
           <h1>Residence check</h1>
       </header>
       
@@ -93,14 +96,14 @@
             <input type="range" name="input_2014" id="input_2014" value="0" min="0" max="365" data-popup-enabled="true" data-highlight="true" data-show-value="true">
         </form>
         
-        <a href="#form-result" data-role="button" id="form-input-submit-button">Submit</a>
+        <a href="#form-result" data-role="button" id="form-input-submit-button" data-transition="slidefade">Submit</a>
         
       </article>
       
       <footer data-role="footer" data-position="fixed">
          <nav data-role="navbar">
           <ul>
-              <li><a href="index.html" data-icon="home" data-ajax="false">Home</a></li>
+              <li><a href="index.html" data-icon="home" data-transition="slidefade">Home</a></li>
               <li><a href="http://www.taxworld.ie" data-icon="info">Taxworld</a></li>
           </ul>
          </nav>
@@ -109,10 +112,10 @@
    
    
    
-   <div id="form-result" data-role='page'>
+   <div id="form-result" data-role='page' data-title="Residence check - your results">
       
       <header data-role="header" data-position="fixed">
-          <a href="index.html" data-icon="home" data-ajax="false" data-iconpos='notext'></a>
+          <a href="index.html" data-icon="home" data-transition="slidefade" data-iconpos='notext'></a>
           <h1>Residence check</h1>
       </header>
       
@@ -162,14 +165,14 @@
        <p>&nbsp;</p>
         
         
-        <a href="#input-form-page" data-role="button" data-icon="arrow-l" data-transition="pop">Go again</a>
+        <a href="#input-form-page" data-role="button" data-icon="arrow-l"  data-transition="slidefade">Go again</a>
 	 
       </article>
       
       <footer data-role="footer" data-position="fixed">
          <nav data-role="navbar">
           <ul>
-              <li><a href="index.html" data-icon="home" data-ajax="false">Home</a></li>
+              <li><a href="index.html" data-icon="home" data-transition="slidefade">Home</a></li>
               <li><a href="http://www.taxworld.ie" data-icon="info">Taxworld</a></li>
           </ul>
          </nav>
