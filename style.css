@@ -1,24 +1,21 @@
 article {
-    background-color: #fff;
+  background-color: #fff;
 }
-
 .taxworld-logo {
-    margin: 0 auto;
-    display: block;
-    max-width: 241px;
+  margin: 0 auto;
+  display: block;
+  max-width: 241px;
 }
 .text-center {
-    text-align: center;
+  text-align: center;
 }
-
 hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid #ddd;
+  border: 0;
+  height: 0;
+  border-top: 1px solid #ddd;
 }
-
 /* stop cutting off text in listview*/
 .ui-listview>.ui-li-static {
-    white-space: normal !important;
-    text-align: center;
+  white-space: normal !important;
+  text-align: center;
 }
