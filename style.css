@@ -19,3 +19,16 @@ hr {
   white-space: normal !important;
   text-align: center;
 }
+@media only screen and (min-width: 600px){
+  .ui-page {
+    width: 600px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    border-right: 1px #666 outset !important;
+    border-left: 1px #666 outset !important;
+  }
+  .ui-header-fixed, .ui-footer-fixed {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
